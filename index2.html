@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./main.css">
+</head>
+
+<body>
+    <div class="main_body">
+        <div class="card">
+            <img src="./images/webdev2-01.png" alt="img">
+            <div style="display: flex; justify-content:space-evenly; margin-top: 20px;">
+                <button id="id1">Click Me</button>
+                <button id="id2" onclick="change_bg()">Change Bg</button>
+            </div>
+            <p>No. of times button clicked
+            <span  id="count">0</span>
+            </p>
+        </div>
+    </div>
+</body>
+<script src="./index.js"></script>
+<script>
+    const change_bg=()=>{
+        let x=Math.floor(Math.random()*256);
+        let y=Math.floor(Math.random()*256);
+        let z=Math.floor(Math.random()*256);
+        document.querySelector("body").style.backgroundColor=`rgb(${x},${y},${z})`;
+    }
+</script>
+</html>
